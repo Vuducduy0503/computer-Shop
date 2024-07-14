@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.card-custom {
+  width: 18rem; /* Đảm bảo chiều rộng cố định cho card */
+  height: 100%; /* Sử dụng chiều cao 100% để các card cùng chiều dài */
+  display: flex;
+  flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card-custom .card-img-top {
+  flex: 0 0 auto; /* Cho phép hình ảnh có chiều cao tự nhiên */
+  object-fit: cover; /* Đảm bảo hình ảnh được điều chỉnh kích thước cho phù hợp */
+  height: 14rem; /* Thiết lập chiều cao cố định cho hình ảnh */
+}
+
+.card-custom .card-text {
+  flex: 1 1 auto; /* Cho phép nội dung có chiều cao tự nhiên */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu đen với opacity 0.5 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
